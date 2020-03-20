@@ -1,0 +1,20 @@
+*{
+    background-color: whitesmoke;
+}
+.apresentacao{
+    display: table;
+    
+}
+.imagem{
+    display: table-cell;
+    float: left;
+}
+
+.texto{
+    display: table-cell;
+    float: right;
+    width: 400px;
+    margin: 20px 20px 20px 50px
+}
+
+
