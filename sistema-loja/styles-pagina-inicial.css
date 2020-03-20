@@ -1,0 +1,20 @@
+body{
+    background-color: white;
+}
+
+a{
+    padding: 20px;
+    font-size: 25px;
+    color:black;
+    float: right;
+    
+}
+.logo{
+    display: inline;
+}
+.figura{
+    display: inline;
+}
+.abraço,p{
+    display: inline;
+}
