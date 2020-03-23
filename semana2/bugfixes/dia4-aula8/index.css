@@ -97,6 +97,10 @@ a{
   *
   **/
 
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
 div:nth-child(2),
 div:last-child {
     text-align: center;
@@ -118,7 +122,6 @@ td button {
     height: 30px;
     border-radius: 5px;
     color: black;
-    
 }
 
 .container-do-search {
@@ -144,3 +147,4 @@ td button {
 {
     background: #635a3d;
 }
+ 
