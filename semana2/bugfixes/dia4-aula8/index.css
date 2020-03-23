@@ -118,6 +118,7 @@ td button {
     height: 30px;
     border-radius: 5px;
     color: black;
+    
 }
 
 .container-do-search {
@@ -138,4 +139,8 @@ td button {
 
 #back-button:hover {
     background-color: #635a3d
+}
+.tabela button:hover
+{
+    background: #635a3d;
 }
