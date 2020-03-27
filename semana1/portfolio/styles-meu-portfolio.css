@@ -1,0 +1,45 @@
+.cabecalho{
+    background-color: black;
+    color: lightgray;
+    font-family: 'Montserrat', sans-serif;
+    margin: auto;
+}
+
+.imagem{
+    background-color: white;
+    color: black.;
+    display: table-cell;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sobre-mim{
+    padding: 10px;
+}
+
+
+.minhas-habilidade{
+    display: block;
+    padding: 5px;
+    margin: 10px;
+}
+h3{
+    text-align: center;
+}
+
+footer, a{
+    background-color: black;
+    color: lightgray;
+    font-family: 'Montserrat', sans-serif; 
+    text-decoration: none;
+    margin: auto;
+}
+
+ td{
+     padding: 10px;
+     border-spacing: 5px;
+ }
+ tr{
+    padding: 10px;
+    border-spacing: 5px;
+}
