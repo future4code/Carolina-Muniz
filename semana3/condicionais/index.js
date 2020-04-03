@@ -35,7 +35,7 @@ if(numeroA  > numeroB) {
 }
 */
 
-//4. b)
+/*4. b)
 let numeroA = Number(prompt("Digite um número:"))
 let numeroB = Number(prompt("Digite outro número:"))
 let numeroC = Number(prompt("Digite mais um número:"))
@@ -64,51 +64,39 @@ if(numeroA > numeroB && numeroA > numeroC){
 }else{
     console.log("else "+numeroC)
 }
+*/
 
 //5. a) imagem no anexo na pasta condicionais
 
 //5. b)
-let vertebrado 
-    if(vertebrado === s){
-        console.log(Vertebrado)
-    } else {
-        console.log(Invertebrado)
-    }
 
-let (invertebrados === s)
-    if(invertebrado === s){
-        console.log(Possui ossos)
-    } else {
-         console.log(Não possui ossos)
-    }
 
-let (pelos)
-    if(pelos === s){
-        console.log(manifero)
-    } else {
-        console.log(nao mamifero)
-    }
-let (mamífero)
-    if(mamifero === s){
-        console.log(racional)
-    } else {
-        console.log(nao racional)
-    }
-let (racional) {
-    console.log(homem)
+const temOsso = prompt("O animal tem ossos? [s, n].")
 
-let (naoMamifero) 
-    if(naoMamifero === s){
-    console.log(penas)
-    } else {
-        console.log(nao penas)
-    }
-
-let (naoPenas)
-    if(naoMamifero === s){
-        console.log(terrestre)
+    if (temOsso === "s"){
+        const temPelos = prompt("O animal tem pêlos? [s, n].")    
+        if (temPelos === "s") {
+            const racional = prompt("O animal é racional? [s, n].")
+                if (racional === "s") {
+                    console.log("Homem")
+                } else {
+                    console.log("Não humano")
+                }
         } else {
-        console.log(nao terrestre)
-    }   
-
-let (terrestre)
+                const penas = prompt ("o animal tem penas? [s, n]" )
+                if (penas === "s"){
+                    console.log("Aves")        
+                } else {
+                    const terrestre = prompt ("o animal é terrestre? [s, n]" )
+                    if (terrestre === "s"){     
+                        if (viveParteDaVidaNaAgua === "s"){
+                            const viveParteDaVidaNaAgua = prompt ("o animal vive parte da vida na água? [s, n]" )
+                        } else {
+                            console.log("Peixe")
+                        }
+                    }
+                }
+            }
+    } else {
+        console.log("Invertebrado")
+    } 
