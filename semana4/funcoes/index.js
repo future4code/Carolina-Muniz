@@ -32,11 +32,11 @@ var idade= prompt('Quantos anos você tem?')
 var endereço= prompt('Qual o endereço que você mora?')
 var estudante= prompt('é estudante? [s, n]')
 
-let mensagemFinal = function(mensagem){
+let mensagemFinal = function(){
     if (estudante === "s"){
         return mensagem(nome + " , " + idade + " , " + endereço + " e sou estudante.")
     } else 
         mensagem(nome + " , " + idade + " , " + endereço + " e não sou estudante.")
 }
-console.log(mensagemFinal)
+console.log(mensagem)
 
