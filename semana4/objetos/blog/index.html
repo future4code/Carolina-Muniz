@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="index.js"></script>
+    <link href="index.css" type="text/css" rel="stylesheet" />
+    <title>Blog</title>
+  </head>
+  <body>
+    <h2>Criar post</h2>
+    <form id="criacaoDeConteudo" action="conteudo.html">
+        <label for="titulo">Título do post</label> 
+        <input type="text" id="titulo" value="titulo"><br>
+        <label for="autor">Autor</label>
+        <input type="text" id="autor" value="autor"><br>
+        <label for="date">Data</label>
+        <input type="date" id="data" value="data"><br>
+        <label for="conteudo">Conteúdo</label> 
+        <textarea type="text" id="conteudo" value="conteudo"></textarea><br>
+        <button onclick=myFunction()>Criar</button>
+    </form>
+    
+    <script>
+    function myFunction() {
+      document.getElementById("criacaoDeConteudo").submit();
+    }
+    </script>
+  </body>
+</html>
