@@ -18,7 +18,17 @@ e se não for nenhumas dessa opções parace um alerta dizendo que o investiment
 a função retorna o valor após a multiplicao pelo percentual de cada investimento.
 criando uma nova variavel novoMontate, ele invoca a funçao investeDinheiro solicitando o investimento em açoes com o valor de 150
 e a variavel segundoMontate invoca a funcao investeDinheiro solicitando aplicacao no tesouro direto e o valor de 200, mas irá retornar investimento incorreto, pois 
-não há essa opçãod e investimento. 
+não há essa opçãod e investimento. */
+
+/* 3.
+são criados tres constantes, 1 array de numeros e 2 arryas vazios (array1 e array2)
+quanto os itens do array de numeros forem pares, eles sao ser incluidos no array1, 
+quando os numeros forem ímpares serão incluidos no array2.
+primeiro é impresso no console o tamanho o array de numeros, 
+depois imprime o tamanho do array1 e
+logo apos o tamanho do array2
+
+
 
 
 
