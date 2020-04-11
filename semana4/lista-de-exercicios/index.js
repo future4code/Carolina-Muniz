@@ -26,7 +26,23 @@ quanto os itens do array de numeros forem pares, eles sao ser incluidos no array
 quando os numeros forem ímpares serão incluidos no array2.
 primeiro é impresso no console o tamanho o array de numeros, 
 depois imprime o tamanho do array1 e
-logo apos o tamanho do array2
+logo apos o tamanho do array2 */
+
+ /*4. SEM RESPOSTA
+
+
+ Exercícios de lógica de programação
+ 1) a. false
+    b. false
+    c. true
+    d. true
+    e. SEM RESPOSTA
+    
+*/
+
+
+
+
 
 
 
