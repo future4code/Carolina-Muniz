@@ -30,15 +30,33 @@ logo apos o tamanho do array2 */
 
  /*4. SEM RESPOSTA
 
-
+============================================================================
  Exercícios de lógica de programação
+
  1) a. false
     b. false
     c. true
     d. true
-    e. SEM RESPOSTA
-    
+    e. SEM RESPOSTA  
 */
+
+// exercicio 2 - SEM RESPOSTA
+
+let ladosTriangulo = a, b, c
+
+
+if (a===b===c) {
+    console.log("Equilátero");
+  } else if (a) {
+    greeting = "Good day";
+  } else {
+    greeting = "Good evening";
+  }
+
+
+
+
+
 
 
 
