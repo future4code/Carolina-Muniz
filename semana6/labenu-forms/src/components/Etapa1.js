@@ -3,7 +3,7 @@ import React from 'react';
 export class Etapa1 extends React.Component {
   render() {
     return (
-    <div className={"formulario1"}>
+    <div>
         <h1>ETAPA 1 - DADOS GERAIS</h1>
         <form>
             <div>
@@ -29,8 +29,8 @@ export class Etapa1 extends React.Component {
             </div>
         </form>   
     </div>
-  );
-}
+    )
+  }
 }
 
 export default Etapa1;
