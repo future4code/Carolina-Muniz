@@ -3,40 +3,37 @@ import styled from 'styled-components';
 
 
 const StyleCadastro = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid black;
-    width: 400px;
-    height: 200px;
-    margin: 30px;
-    justify-content: space-evenly;    
+  display: grid;
+  gap: 10px;
+  justify-content: left;    
 `
 
-class Cadastro extends React.Component {
-    constructor(props) {
-        super(props)
-    }
+export class Cadastro extends React.Component {
+  state = {
+    nomeValue: '',
+    emailValue: ''
+  }
+
+  onChangeName = (event) => {
+    this.setState({nomeValue: event.target.value})
+  }
+
+  onChangeEmail = (event) => {
+    this.setState({emailValue: event.target.value})
+  }
+
+  onClickCadastrar = () => {
+    console.log('Nome: ', this.state.nomeValue)
+    console.log('E-mail: ', this.state.emailValue)
+  }
     
   render () {
-    const listaDosCadastrados = this.props.listaDeUsuarios.map((nome) => {
-        console.log("cada usuário: ", nome)
-        return nome
-    })
     return (
       <StyleCadastro>
-          <span>
-            <label>Nome:</label> &nbsp;
-            <input/>
-          </span>
-          <span>
-            <label>E-mail:</label> &nbsp;
-            <input/>
-          </span>
-          <button>Salvar</button>
+        <input placeholder = {'Nome'} value={this.state.nomeValue} onChange={this.onChangeName} />
+        <input placeholder = {'E-mail'} value={this.state.emailValue} onChange={this.onChangeEmail} />
+        <button onClick={this.onClickCadastrar}>Cadastrar</button>
       </StyleCadastro>
     )
   }
 }
-
-export default Cadastro;

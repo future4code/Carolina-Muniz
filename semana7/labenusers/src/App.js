@@ -1,32 +1,31 @@
 import React from 'react';
-import Cadastro from './components/Cadastro';
-import ListaUsuarios from './components/ListaUsuarios';
+import { ListaUsuarios } from './components/ListaUsuarios';
 import styled from 'styled-components';
+import { Cadastro } from './components/Cadastro';
 
 const StyleApp = styled.div`
   margin: 20px;
 `
 
-const listaDeUsuarios = [{
-  id: 1,
-  nome: "Carol",
-  email: "carol@carol.com",
-},
-{
-  id: 2,
-  nome: "Luiz",
-  email: "luiz@luiz.com",
-}]
-
 class App extends React.Component {
-  
+  state = {
+    paginaAtual: 'CADASTRO'
+  }
+
+  onClickMudaPagina = () => {
+    const proximaPagina = this.state.paginaAtual === 'CADASTRO' ? 'LISTA' : 'CADASTRO'
+    this.setState({paginaAtual: proximaPagina})
+  }
   render () {
     return (
       <StyleApp>
-        <button>Ir para página de lista</button>
-        <button>Ir para página de registro</button>
-        <Cadastro listaDeUsuarios={listaDeUsuarios}/>
-        <ListaUsuarios/>
+        <button onClick={this.onClickMudaPagina}>
+          {this.state.paginaAtual === 'CADASTRO' ? 
+          'Ir para página de usuários cadastrados' : 'Voltar para página da cadastro'}
+        </button>
+        {this.state.paginaAtual === 'CADASTRO' ?  
+        <Cadastro /> : <ListaUsuarios/>
+        }
       </StyleApp>
     )
   }
