@@ -38,12 +38,13 @@ axios.delete('https://us-central1-labenu-apis.cloudfunctions.net/labenusers/user
   headers: {
     Authorization: 'carolina-muniz-julian'
   }
-}).then((response) => {
-  window.alert ('Usuário deletado com sucesso')
-}).catch((error)=> {
-  window.alert('Erro ao deletar o usuário')
+}).then((response => {
+  window.alert ('Usuário deletado com sucesso');
 })
-}
+.catch(error => {
+  window.alert('Erro ao apagar o usuário');
+});
+};
 
   render () { 
     return (
