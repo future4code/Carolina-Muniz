@@ -9,44 +9,40 @@ import iconeCoracaoPreto from '../../img/favorite.svg'
 import iconeComentario from '../../img/comment_icon.svg'
 
 const Post = (props) => {
-
   const [curtido, setCurtido] = useState(false)
-
-  const [numeroCurtidas, setNumeroCurtidas] = useState(false)
-
-  const [numeroComentarios, setNumeroComentarios] = useState(false)
-
-  const [comentarios, setComentarios] = useState(false) 
+  const [numeroCurtidas, setNumeroCurtidas] = useState(0)
+  const [comentando, setComentando] = useState(false)
+  const [numeroComentarios, setNumeroComentarios] = useState(0)
+  const [comentarios, setComentarios] = useState([]) 
 
   const onClickCurtida = () => {
     if (curtido) {
       setCurtido(!curtido)
-	    setNumeroCurtidas(numeroCurtidas - 1)
+      setNumeroCurtidas(numeroCurtidas - 1)
     } else {
       setCurtido(!curtido)
       setNumeroCurtidas(numeroCurtidas + 1)
     }
   };  
 
-  onClickComentario = () => {
-    const [comentando, setComentando] = useState(!comentando)
-  }
+  const onClickComentario = () => {
+    setComentando(!comentando)
+  };
 
   const enviarComentario = (comentario) => {
     const listaDeComentarios = [...comentarios, comentario]
 
-    this.setState({
-      comentarios: listaDeComentarios,
-      comentando: false,
-      numeroComentarios: this.state.numeroComentarios + 1
-    })
+    setComentarios(listaDeComentarios)
+    setComentando(false)
+    setNumeroComentarios(numeroComentarios + 1)
   }
 
   const iconeCurtida = curtido ? (iconeCoracaoPreto) : (iconeCoracaoBranco)
   
   const caixaDeComentario = comentando ? (
     <SecaoComentario enviarComentario={enviarComentario}/>
-  ) : (comentarios.map(comentario => {
+  ) : (
+    comentarios.map(comentario => {
       return (
         <CommentContainer>
           <p>{comentario}</p>
