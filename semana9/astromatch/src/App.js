@@ -2,6 +2,7 @@ import React from 'react';
 import { MatchesList } from './components/MatchesList';
 import { Home } from './components/Home';
 
+
 export class App extends React.Component {
   state = {
     vaiParaListaDeMatches: false
