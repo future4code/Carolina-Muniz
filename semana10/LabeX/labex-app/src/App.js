@@ -9,38 +9,54 @@ import LoginPage from "./components/LoginPage"
 import CreateTripPage from "./components/CreateTripPage"
 import ReviewPage from "./components/ReviewPage"
 import IndividualReviewPage from "./components/IndividualReviewPage"
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
+import styled from 'styled-components'
+import img from './components/PlanoDeFundo/fundo.jpg'
+
+const AppStyle = styled.div`
+  background-image: url(${img});
+  background-repeat: no-repeat;
+ 
+`
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/">
-          <HomePage />
-        </Route>
-        <Route exact path="/login">
-          <LoginPage />
-        </Route>
-        <Route exact path="/duvidas">
-          <QueryPage />
-        </Route>
-        <Route exact path="/formulario-de-inscricao">
-          <FormPage />
-        </Route>
-        <Route exact path="/lista-de-viagens">
-          <TravelListPage />
-        </Route>
-        <Route exact path="/criar-viagens">
-          <CreateTripPage />
-        </Route>
-        <Route exact path="/analise-de-inscricao-por-viagem">
-          <ReviewPage />
-        </Route>
-        <Route exact path="/analise-de-inscricao-por-candidato">
-          <IndividualReviewPage />
-        </Route>
-      </Switch>
-    </BrowserRouter>
+    
+    <AppStyle>
+      <BrowserRouter>
+      <Header/>
+        <Switch>
+          <Route exact path="/home">
+            <HomePage />
+          </Route>
+          <Route exact path="/login">
+            <LoginPage />
+          </Route>
+          <Route exact path="/duvidas">
+            <QueryPage />
+          </Route>
+          <Route exact path="/formulario-de-inscricao">
+            <FormPage />
+          </Route>
+          <Route exact path="/lista-de-viagens">
+            <TravelListPage />
+          </Route>
+          <Route exact path="/criar-viagens">
+            <CreateTripPage />
+          </Route>
+          <Route exact path="/analise-de-inscricao-por-viagem">
+            <ReviewPage />
+          </Route>
+          <Route exact path="/analise-de-inscricao-por-candidato">
+            <IndividualReviewPage />
+          </Route>
+        </Switch>
+        <Footer/>
+      </BrowserRouter>
+    </AppStyle>
+   
   );
 };
 
