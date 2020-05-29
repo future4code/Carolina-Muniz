@@ -8,9 +8,10 @@ import styled from 'styled-components'
 
 const FooterStyle = styled.div`
   display: flex;
-  align-items: flex-end;
+  align-content: flex-end;
   justify-content: space-evenly;
   color: #ff5f00;
+  padding-top: 10px;
 `
 
 

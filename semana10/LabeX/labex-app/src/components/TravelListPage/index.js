@@ -11,7 +11,6 @@ const ReviewPageStyle = styled.div`
 
 const FormReviewStyle = styled.div`
   display: grid;
-  width: 60%;
   justify-content:center;
   gap: 15px;
 `
@@ -30,7 +29,7 @@ const ReviewPage = () => {
           <FormReviewStyle>
             
             
-            <Button variant="contained" onClick={goToCreateTripPage}>Criar viagem</Button>
+            <Button variant="contained" onClick={goToCreateTripPage}>Criar nova viagem</Button>
           </FormReviewStyle>
         </form>
     </ReviewPageStyle>

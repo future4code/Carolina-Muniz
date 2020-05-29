@@ -11,8 +11,8 @@ const QueryStyle = styled.div`
 
 const FormStyle = styled.div`
   display: grid;
-  width: 60%;
   gap: 15px;
+  justify-content: center;
   
 `  
 

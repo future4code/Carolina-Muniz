@@ -10,7 +10,6 @@ const FormPageStyle = styled.div`
 
 const FormStyle = styled.div`
   display: grid;
-  width: 60%;
   justify-content:center;
   gap: 15px;
 `

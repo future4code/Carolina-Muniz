@@ -13,12 +13,14 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 import styled from 'styled-components'
-import img from './components/PlanoDeFundo/fundo.jpg'
+import img from './components/Images/fundo.jpg'
+
 
 const AppStyle = styled.div`
   background-image: url(${img});
+  background-size: 100vw 100vh;
   background-repeat: no-repeat;
- 
+  padding: 10px;
 `
 
 const App = () => {
@@ -28,7 +30,7 @@ const App = () => {
       <BrowserRouter>
       <Header/>
         <Switch>
-          <Route exact path="/home">
+          <Route exact path="/">
             <HomePage />
           </Route>
           <Route exact path="/login">

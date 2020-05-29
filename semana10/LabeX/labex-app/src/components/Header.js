@@ -9,22 +9,21 @@ import {useHistory} from 'react-router';
 
 const HeaderStyle = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-around;
   color: #ff5f00;
+
 `
 
 const IconStyle = styled.div`
   display: flex;
-  justify-content: space-evenly;
-  font-size: x-large;
+  align-items: center;
 `
 
 const Header = () => {
   const history = useHistory();
 
   const goToHomePage = () => {
-    history.push("/home");
+    history.push("/");
   } 
 
   const goToQueryPage = () => {

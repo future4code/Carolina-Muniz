@@ -2,6 +2,7 @@ import React from "react";
 import Button from '@material-ui/core/Button'
 import styled from 'styled-components'
 import {useHistory} from 'react-router';
+import axios from "axios";
 
 
 const HomeStyle = styled.div`
@@ -18,12 +19,18 @@ const ButtonStyled = styled.div`
 const HomePage = () => {
   const history = useHistory();
 
-  const goToTravelListPage = () => {
-    history.push("/lista-de-viagens");
-  } 
-
   const goToFormPage = () => {
     history.push("/formulario-de-inscricao")
+  }
+
+  const goToTravelListPage = () => {
+    axios.get('https://us-central1-labenu-apis.cloudfunctions.net/labeX/carolina-muniz-julian/trips',
+    ).then((response) =>{
+      console.log(response.data.trips)
+      history.push("/lista-de-viagens")
+    }).catch((error)=>{
+      console.log(error.message)
+    }) 
   }
 
   return(
@@ -31,6 +38,10 @@ const HomePage = () => {
         
       <div>
         <h1>Não perca a oportunidade de viver uma experiência fantástica!</h1>
+      </div>
+
+      <div>        
+      <img  />
       </div>
         
       <ButtonStyled>

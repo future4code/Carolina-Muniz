@@ -6,7 +6,6 @@ import Button from '@material-ui/core/Button'
 
 const FormLoginStyle = styled.div`
   display: grid;
-  width: 60%;
   justify-content:center;
   gap: 15px;
 `
