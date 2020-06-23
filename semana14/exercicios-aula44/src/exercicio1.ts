@@ -56,3 +56,17 @@ const pai: pessoa = {
 
 //e) Modifique o tipo de objeto para que possamos apenas escolher entre as cores do arco-íris. 
 //Use um `enum` para isso.
+enum coresDoArcoIris {
+    VERDE = 'verde',
+    AMARELO = 'amarelo',
+    LARANJA = 'laranja',
+    VERMELHO = 'vermelho',
+    ROXO = 'roxo',
+    AZUL = 'azul'
+}
+
+const mae: pessoa = {
+    nome: 'Marly',
+    idade: 71,
+    corFavorita: coresDoArcoIris.AMARELO
+}

@@ -21,4 +21,18 @@ const pai = {
     idade: 89,
     corFavorita: 'verde'
 };
+var coresDoArcoIris;
+(function (coresDoArcoIris) {
+    coresDoArcoIris["VERDE"] = "verde";
+    coresDoArcoIris["AMARELO"] = "amarelo";
+    coresDoArcoIris["LARANJA"] = "laranja";
+    coresDoArcoIris["VERMELHO"] = "vermelho";
+    coresDoArcoIris["ROXO"] = "roxo";
+    coresDoArcoIris["AZUL"] = "azul";
+})(coresDoArcoIris || (coresDoArcoIris = {}));
+const mae = {
+    nome: 'Marly',
+    idade: 71,
+    corFavorita: coresDoArcoIris.AMARELO
+};
 //# sourceMappingURL=exercicio1.js.map
