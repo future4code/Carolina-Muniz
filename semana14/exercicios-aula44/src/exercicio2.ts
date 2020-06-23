@@ -26,3 +26,12 @@ function multiplicacao(a: number, b: number):number {
 console.log(multiplicacao(10, 5))
 
 // d) Qual deles é o maior
+function retornaMaior(a: number, b: number):number {
+    if(a>b){
+        return a
+    } else {
+        return b
+    }
+}
+
+console.log(retornaMaior(10, 5))
