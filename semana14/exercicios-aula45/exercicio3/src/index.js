@@ -19,17 +19,16 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const fs = __importStar(require("fs"));
+var fs = __importStar(require("fs"));
 function criarTarefa(tarefa) {
-    const fileName = 'tarefas.json';
-    const fileBuffer = fs.readFileSync(fileName);
-    const fileText = fileBuffer.toString();
-    const tarefas = JSON.parse(fileText);
-    const novaTarefa = process.argv[2];
+    var fileName = 'tarefas.json';
+    var fileBuffer = fs.readFileSync(fileName);
+    var fileText = fileBuffer.toString();
+    var tarefas = JSON.parse(fileText);
+    var novaTarefa = process.argv[2];
     tarefas.push(novaTarefa);
-    const tarefasAtualizadas = JSON.stringify(tarefas);
+    var tarefasAtualizadas = JSON.stringify(tarefas);
     fs.writeFileSync(fileName, tarefasAtualizadas);
     console.log(tarefas);
 }
 criarTarefa("");
-//# sourceMappingURL=exercicio3.js.map

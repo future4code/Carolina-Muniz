@@ -30,4 +30,4 @@ const resultado = (operacao) => {
     }
 };
 console.log(resultado(operacao));
-//# sourceMappingURL=exercicio2.js.map
+//# sourceMappingURL=index.js.map
