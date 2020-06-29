@@ -1,0 +1,43 @@
+[
+  {
+    "name": "Carolina",
+    "birthDate": "13/01/1984",
+    "cpf": "111.111.111-11",
+    "balance": 0,
+    "extract": [
+      {
+        "description": "Mercado",
+        "value": 10,
+        "date": "26/06/2020"
+      }
+    ]
+  },
+  {
+    "name": "Luiz",
+    "birthDate": "12/08/1985",
+    "cpf": "222.222.222-22",
+    "balance": 0,
+    "extract": []
+  },
+  {
+    "name": "Marly",
+    "birthDate": "15/05/1949",
+    "cpf": "333.333.333-33",
+    "balance": 0,
+    "extract": []
+  },
+  {
+    "name": "Walter",
+    "birthDate": "25/08/1930",
+    "cpf": "444.444.444-44",
+    "balance": 0,
+    "extract": []
+  },
+  {
+    "name": "Sara",
+    "birthDate": "21/04/200",
+    "cpf": "555.555.555-55",
+    "balance": 0,
+    "extract": []
+  }
+]
