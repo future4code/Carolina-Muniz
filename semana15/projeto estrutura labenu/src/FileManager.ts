@@ -1,6 +1,9 @@
 import * as fs from "fs"
+import { Students } from "./Students"
+import { Teachers } from "./Teachers"
+import { Missions } from "./Missions"
 
-class FileManager {
+export class FileManager {
     constructor(
         private filePath: string
     ) {}
@@ -16,5 +19,18 @@ class FileManager {
     public readFiel(): any {
         const data = fs.readFileSync(this.filePath)
         return JSON.parse(data.toString())
+    }
+
+    public registerInJson(classInstance: Students | Teachers | Missions) {
+        let classInstances: (Students | Teachers | Missions)[] = []
+        try{
+            classInstances = this.readFiel()
+        } catch(erro){
+            if(erro){
+                this.writeFile(classInstances)
+            } 
+        }
+        classInstances.push(classInstance)   //refere-se a tipagem do registerInJson
+        return this.writeFile(classInstances)
     }
 }
