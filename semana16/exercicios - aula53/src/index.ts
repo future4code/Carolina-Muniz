@@ -1,5 +1,7 @@
 import knex from "knex";
 import dotenv from "dotenv";
+import express, { Request, Response } from "express"
+import { AddressInfo } from "net";
 
 dotenv.config();
 
@@ -13,6 +15,11 @@ const connection = knex({
     database: process.env.DB_NAME,
   },
 });
+
+const app = express()
+
+app.use(express.json());
+
 // EXERCICIO 1
 //a) Retorna 2 arrays, 1 com a informação solicitada e outro com dados de configuração
 //b)
@@ -88,3 +95,29 @@ async function avgSalaryActor(gender: string): Promise<any>{
 }
 
 avgSalaryActor("male")
+
+//  EXERCÍCIO 3
+// a) Guarda em uma constante os parâmetros passados nas requisições
+// b) Permite definir a resposta devolvida, tanto no sucesso quanto no erro.
+// c)
+app.get('/actor', async function(req: Request, res: Response){
+    try {
+        const count = await countActorFromGender(req.query.gender as string)
+        res.status(200).send({
+            quantity: count
+        })
+    } catch (error) {
+        console.log(error)
+        res.status(400).send({message: error.message})
+    }
+})
+
+const server = app.listen(process.env.PORT || 3003, () => {
+    if (server) {
+      const address = server.address() as AddressInfo;
+      console.log(`Server is running in http://localhost:${address.port}`);
+    } else {
+      console.error(`Failure upon starting server.`);
+    }
+  });
+
