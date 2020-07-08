@@ -59,4 +59,32 @@ async function updateSalaryActor(id: string, salary: number): Promise<any>{
 updateSalaryActor("001", 350000)
 
 //b)
+async function deleteActor(id: string): Promise<any>{
+    try {
+        const result = await connection.raw(`
+            DELETE FROM actor
+            WHERE id="${id}"
+        `)
+        console.log("Ator deletado com sucesso.")
+    } catch (error) {
+        console.log(error)
+    }
+}
 
+deleteActor("003")
+
+// c)
+async function avgSalaryActor(gender: string): Promise<any>{
+    try {
+        const result = await connection.raw(`
+            SELECT AVG(salary) 
+            FROM actor 
+            WHERE gender="${gender}";
+        `)
+        console.log(result[0])
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+avgSalaryActor("male")
