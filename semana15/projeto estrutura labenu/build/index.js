@@ -1,0 +1,28 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const FileManager_1 = require("./FileManager");
+const Students_1 = require("./Students");
+const Teachers_1 = require("./Teachers");
+const FullTimeMission_1 = require("./FullTimeMission");
+const NightMission_1 = require("./NightMission");
+const fileManager = new FileManager_1.FileManager('students.json');
+fileManager.registerInJson(Students_1.student1);
+fileManager.registerInJson(Students_1.student2);
+fileManager.registerInJson(Students_1.student3);
+fileManager.setFilePath('teachers.json');
+fileManager.registerInJson(Teachers_1.teacher1);
+fileManager.registerInJson(Teachers_1.teacher2);
+fileManager.registerInJson(Teachers_1.teacher3);
+fileManager.setFilePath('missions.json');
+FullTimeMission_1.fullTimeMission.setName('Turma 1');
+FullTimeMission_1.fullTimeMission.addStudent(Students_1.student1);
+FullTimeMission_1.fullTimeMission.addStudent(Students_1.student2);
+FullTimeMission_1.fullTimeMission.addTeacher(Teachers_1.teacher1);
+fileManager.registerInJson(FullTimeMission_1.fullTimeMission);
+NightMission_1.nightMission.setName('Turma 2');
+NightMission_1.nightMission.addStudent(Students_1.student3);
+NightMission_1.nightMission.addStudent(Students_1.student4);
+NightMission_1.nightMission.addTeacher(Teachers_1.teacher2);
+NightMission_1.nightMission.addTeacher(Teachers_1.teacher3);
+fileManager.registerInJson(NightMission_1.nightMission);
+//# sourceMappingURL=index.js.map
