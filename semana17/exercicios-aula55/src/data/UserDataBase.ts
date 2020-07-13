@@ -1,4 +1,5 @@
 import knex from "knex";
+import { throws } from "assert";
 
 // EXERCICIO 2
 // c)
@@ -16,18 +17,23 @@ export class UserDatabase {
   
       private static TABLE_NAME = "User";
   
-    public async createUser(
+     async createUser(
       id: string,
       email: string,
       password: string
-    ): Promise<void> {
-      await this.connection
-        .insert({
-          id,
-          email,
-          password,
-        })
-          .into(UserDatabase.TABLE_NAME);
+    ) {
+        try {
+            await this.connection
+                .insert({
+                    id,
+                    email,
+                    password, 
+                })
+                .into(UserDatabase.TABLE_NAME)
+        } catch (error) {
+            throw new Error(error.sqlMessage || error.message)
+        }
+    
     }
   }
   
