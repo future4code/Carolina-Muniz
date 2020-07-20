@@ -1,0 +1,92 @@
+[
+    {
+       "id":"2",
+       "startDate":"2020-07-01T03:00:00.000Z",
+       "endDate":"2021-01-31T03:00:00.000Z",
+       "teachers":[
+          {
+             "id":"1",
+             "name":"João",
+             "email":"joao@joao.com",
+             "specialties":[
+                "TYPESCRIPT",
+                "BACKEND"
+             ]
+          }
+       ],
+       "students":[
+          {
+             "id":"1",
+             "name":"Carolina",
+             "email":"carol@carol.com",
+             "birthDate":"1984-01-13T03:00:00.000Z",
+             "hobbies":[
+                "Trabalhos manuais",
+                "Cozinhar doces"
+             ]
+          },
+          {
+             "id":"2",
+             "name":"Luiz",
+             "email":"luiz@luiz.com",
+             "birthDate":"1985-08-12T03:00:00.000Z",
+             "hobbies":[
+                "Ler",
+                "Assistir séries"
+             ]
+          }
+       ],
+       "currentModule":1,
+       "name":"Turma 1"
+    },
+    {
+       "id":"1",
+       "startDate":"2020-03-10T03:00:00.000Z",
+       "endDate":"2021-09-10T03:00:00.000Z",
+       "teachers":[
+          {
+             "id":"2",
+             "name":"Darvas",
+             "email":"darvas@darvas.com",
+             "specialties":[
+                "REACT",
+                "CSS"
+             ]
+          },
+          {
+             "id":"3",
+             "name":"Amanda",
+             "email":"amanda@amanda.com",
+             "specialties":[
+                "TYPESCRIPT",
+                "OOP"
+             ]
+          }
+       ],
+       "students":[
+          {
+             "id":"3",
+             "name":"Camila",
+             "email":"camila@camila.com",
+             "birthDate":"1980-02-16T03:00:00.000Z",
+             "hobbies":[
+                "Ler",
+                "Cuidar de gatos"
+             ]
+          },
+          {
+             "id":"3",
+             "name":"Mirela",
+             "email":"mirela@mirela.com",
+             "birthDate":"1999-05-03T03:00:00.000Z",
+             "hobbies":[
+                "Dançar",
+                "Sair com os amigos"
+             ]
+          }
+       ],
+       "currentModule":4,
+       "name":"Turma 2-na-night"
+    }
+ ]
+ 

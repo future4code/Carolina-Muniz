@@ -1,0 +1,62 @@
+[
+    {
+       "id":"1",
+       "name":"Carolina",
+       "email":"carol@carol.com",
+       "birthDate":"1984-01-13T03:00:00.000Z",
+       "hobbies":[
+          "Trabalhos manuais",
+          "Cozinhar doces"
+       ]
+    },
+    {
+       "id":"2",
+       "name":"Luiz",
+       "email":"luiz@luiz.com",
+       "birthDate":"1985-08-12T03:00:00.000Z",
+       "hobbies":[
+          "Ler",
+          "Assistir séries"
+       ]
+    },
+    {
+       "id":"3",
+       "name":"Camila",
+       "email":"camila@camila.com",
+       "birthDate":"1980-02-16T03:00:00.000Z",
+       "hobbies":[
+          "Ler",
+          "Cuidar de gatos"
+       ]
+    },
+    {
+       "id":"1",
+       "name":"Carolina",
+       "email":"carol@carol.com",
+       "birthDate":"1984-01-13T03:00:00.000Z",
+       "hobbies":[
+          "Trabalhos manuais",
+          "Cozinhar doces"
+       ]
+    },
+    {
+       "id":"2",
+       "name":"Luiz",
+       "email":"luiz@luiz.com",
+       "birthDate":"1985-08-12T03:00:00.000Z",
+       "hobbies":[
+          "Ler",
+          "Assistir séries"
+       ]
+    },
+    {
+       "id":"3",
+       "name":"Camila",
+       "email":"camila@camila.com",
+       "birthDate":"1980-02-16T03:00:00.000Z",
+       "hobbies":[
+          "Ler",
+          "Cuidar de gatos"
+       ]
+    }
+ ]
