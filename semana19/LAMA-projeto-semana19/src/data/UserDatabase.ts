@@ -1,4 +1,5 @@
 import { BaseDatabase } from "./BaseDatabase";
+import { User } from "../model/User";
 
 export class UserDatabase extends BaseDatabase{
 
@@ -19,6 +20,20 @@ export class UserDatabase extends BaseDatabase{
                 password
             })
             .into(UserDatabase.TABLE_NAME);
+
+        } catch (error) {
+            throw new Error(error.sqlMessage || error.message)
+        }
+    }
+
+    public async getByEmail(email: string): Promise<User>{
+        try {
+            const result = await this.getConnection()
+            .select("*")
+            .from(UserDatabase.TABLE_NAME)
+            .where({email: email});
+
+            return User.toUserModel(result[0]);
 
         } catch (error) {
             throw new Error(error.sqlMessage || error.message)

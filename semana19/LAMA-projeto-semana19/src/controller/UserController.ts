@@ -2,7 +2,7 @@ import express, { Request, Response } from "express";
 import HashManager from "../service/HashManager";
 import { Authenticator } from "../service/Authenticator";
 import { UserBusiness } from "../business/UserBusiness";
-import { UserInputDTO } from "../model/User";
+import { UserInputDTO, LoginInputDTO } from "../model/User";
 
 export class UserController{
     
@@ -28,6 +28,29 @@ export class UserController{
             const accessToken = authenticator.generateToken({id: userId})
 
             res.status(200).send({token: accessToken});
+        } catch (error) {
+            res.status(400).send({error: error.message});
+        }
+    }
+
+    public async login (req: express.Request, res: express.Response) {
+        try {
+            const userData: LoginInputDTO = {
+                email: req.body.email, 
+                password: req.body.password
+            }
+
+            const userBusiness = new UserBusiness();
+            const user = await userBusiness.getByEmail(userData);
+
+            const authenticator = new Authenticator();
+            const accessToken = authenticator.generateToken({id: user.getId()})
+
+            res.status(200).send({token: accessToken});
+
+
+
+
         } catch (error) {
             res.status(400).send({error: error.message});
         }
