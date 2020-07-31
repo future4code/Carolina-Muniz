@@ -1,5 +1,6 @@
 import { BaseDatabase } from "./BaseDatabase";
 import { User } from "../model/User";
+import { USER_ROLES } from "../service/Authenticator";
 
 export class UserDatabase extends BaseDatabase{
 
@@ -9,7 +10,8 @@ export class UserDatabase extends BaseDatabase{
         id: string,
         name: string,
         email: string,
-        password: string
+        password: string,
+        role: USER_ROLES
         ) {
         try {
             await super.getConnection()
@@ -17,7 +19,8 @@ export class UserDatabase extends BaseDatabase{
                 id,
                 name,
                 email,
-                password
+                password,
+                role
             })
             .into(UserDatabase.TABLE_NAME);
 

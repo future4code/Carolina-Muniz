@@ -1,3 +1,5 @@
+import { USER_ROLES } from "../service/Authenticator";
+
 export class User{
 
     constructor(
@@ -5,7 +7,9 @@ export class User{
         private email: string,
         private name: string,
         private password: string,
+        private role: USER_ROLES
     ) {}
+
 
     getId(){
         return this.id
@@ -21,6 +25,10 @@ export class User{
 
     getPassword(){
         return this.password
+    }
+
+    getRole(){
+        return this.role
     }
 
     setId(id: string){
@@ -39,12 +47,17 @@ export class User{
         this.password = password;
     }
 
+    setRole(role: USER_ROLES){
+        this.role = role
+    }
+
 public static toUserModel(object: any): User{
     return new User(
         object.id,
         object.email,
         object.name,
         object.password,
+        object.role
     )
 }
 
@@ -53,11 +66,13 @@ public static toUserModel(object: any): User{
 export interface UserInputDTO{
     email: string,
     name: string,
-    password: string
+    password: string,
+    role: USER_ROLES
 }
 
 export interface LoginInputDTO{
     email: string,
-    password: string
+    password: string,
+    role: USER_ROLES
 }
 
