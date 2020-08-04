@@ -1,0 +1,13 @@
+b) Retorna um erro pois espera um input.
+
+c) statusCode: 400
+
+d) statusCode: 400
+
+e) statusCode: 400, pois a senha tem que ter no mínimo 6 dígitos
+
+f) statusCode: 200
+
+g) No return do if que refere-se a validação do input email
+
+h) 
