@@ -16,7 +16,11 @@ export class BandBusiness {
             name,
             musicGenre, 
             responsible);
-        
+    }
 
+    public async info(input){
+        const bandDatabase = new BandDatabase();
+
+        return await bandDatabase.info(input) 
     }
 }
